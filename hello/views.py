@@ -7,7 +7,6 @@ import requests
 def index(request):
     # return HttpResponse('Hello from Python!')
     r = requests.get('http://httpbin.org/status/418')
-    print(r.text)
     return HttpResponse('<pre>' + r.text + '</pre>')#render(request, 'index.html')
 
 
